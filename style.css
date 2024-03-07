@@ -39,6 +39,12 @@ body {
   color: black;
   display: block;
   text-decoration: none;
+  transition: 0.4s;
+}
+.nav-links li a:hover {
+  color: #1d3f89;
+  transform: scale(1.1);
+  text-decoration: underline;
 }
 
 @media (max-width: 650px) {

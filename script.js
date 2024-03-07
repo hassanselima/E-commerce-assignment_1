@@ -105,7 +105,6 @@ const search = () => {
   filteredProducts = products.filter((product) => {
     return product.productName.toLowerCase().includes(inputValue);
   });
-  searchInput.value = "";
 
   if (filteredProducts.length === 0) {
     slider.innerHTML = "<p>No products found</p>";
@@ -115,20 +114,14 @@ const search = () => {
   }
 };
 
-const clearSearchResults = () => {
-  searchInput.value = "";
-};
-
 searchIcon.addEventListener("click", () => {
   if (searchInput.value === "") return;
   search();
-  clearSearchResults();
 });
 
 searchInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter" && searchInput.value !== "") {
     search();
-    clearSearchResults();
   }
 });
 
