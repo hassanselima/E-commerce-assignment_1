@@ -155,7 +155,6 @@ const popupHandler = (e) => {
   popup.classList.toggle("active-popup");
 
   const productId = e.target.parentNode.getAttribute("value");
-  console.log(productId);
   const product = filteredProducts.find(
     (item) => item.id === parseInt(productId)
   );
