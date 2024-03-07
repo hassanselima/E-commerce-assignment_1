@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(173, 173, 173);
+  height: 60px;
+}
+.header .logo {
+  letter-spacing: 1.5px;
+  font-size: 20px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+.bars {
+  display: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+.nav-links li a {
+  padding: 10px;
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dadada;
+  }
+  .nav-links li {
+    border-bottom: 1px solid #000;
+    width: 150px;
+    height: 50px;
+    padding-left: 10px;
+  }
+  .bars {
+    display: block;
+    font-size: 20px;
+    border: 1px solid #505050;
+    padding: 5px;
+  }
+  .navigation:hover .nav-links {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+  }
+  .navigation {
+    position: relative;
+  }
+}
+
+.main {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 100px;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #2f2f34;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.search input {
+  border: none;
+  flex-grow: 1;
+  min-width: 0px;
+  padding: 5px;
+  outline: none;
+  font-size: 18px;
+  border-bottom: 2px solid;
+}
+.search .search-icon {
+  border: none;
+  cursor: pointer;
+}
+.slider {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.prdItem {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: 0.4s;
+}
+.prdItem:hover {
+  transform: scale(1.1);
+}
+.img {
+  width: 100%;
+  min-height: 200px;
+  display: block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.prdInfo {
+  background-color: #adadad;
+  padding: 10px;
+  min-height: 100px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.moreInfo {
+  font-size: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.show {
+  cursor: pointer;
+  color: rgb(0, 101, 196);
+}
+.prdPrice {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.popup {
+  position: fixed;
+  top: 15%;
+  left: 20%;
+  width: 60%;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #6b8ab1;
+  visibility: hidden;
+  box-shadow: 0 5px 30px rgba(8, 6, 6, 0.3);
+}
+.blur {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+.active-popup {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+.box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+.name {
+  margin-bottom: 10px;
+}
+.description {
+  margin-bottom: 10px;
+}
+.img img {
+  width: 100%;
+}
+.prd-cat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+.rate i {
+  color: gold;
+}
+.close {
+  border: none;
+  background-color: #1d3f89;
+  padding: 10px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 10px;
+}
+.footer {
+  background-color: #768aad;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+.footer-links a {
+  color: #ededed;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #1d3f89;
+  transform: scale(1.1);
+}
+.footer .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.footer .social-icons i {
+  width: 30px;
+  font-size: 20px;
+  color: #000;
+}
+.footer .social-icons i:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+@media (max-width: 530px) {
+  .footer {
+    flex-direction: column;
+    height: max-content;
+    gap: 20px;
+  }
+}
